@@ -2,16 +2,13 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nice-tech
-      url-base: https://github.com/Leetisdeep/zmk-config
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-nano-battery-monitor
-      remote: nice-tech
-      revision: main
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
