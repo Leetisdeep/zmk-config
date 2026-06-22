@@ -13,7 +13,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <3 4 5>;
+            key-positions = <21 22 23>;  // Right side combo positions
         };
     };
 
@@ -21,16 +21,18 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            // Physical right half typed as if it's the left half
+            // BUT with correct key mapping for the right side
             // -----------------------------------------------------------------------------------------
-            // | BSPC |  ;  |  Y  |  U  |  L  |  J  |   |  G  |  P  |  F  |  W  |  Q  |  TAB |
-            // |  '   |  O  |  I  |  E  |  N  |  H  |   |  D  |  T  |  S  |  R  |  A  | CTRL |
-            // | ESC  |  /  |  .  |  ,  |  M  |  K  |   |  B  |  V  |  C  |  X  |  Z  | SHFT |
+            // | BSPC |  P  |  O  |  I  |  U  |  Y  |   |  T  |  R  |  E  |  W  |  Q  |  TAB |
+            // |  '   |  ;  |  L  |  K  |  J  |  H  |   |  G  |  F  |  D  |  S  |  A  | CTRL |
+            // | ESC  |  /  |  .  |  ,  |  M  |  N  |   |  B  |  V  |  C  |  X  |  Z  | SHFT |
             //                    | ALT | RSE | ENT |   | SPC | LWR | GUI |
 
             bindings = <
-&mo 3  &kp SEMICOLON  &kp Y  &kp U  &kp I    &kp O          &kp P    &kp Q  &kp W  &kp E  &kp R    &kp TAB
-&kp SQT  &kp L       &kp K  &kp J  &kp H    &kp G          &kp F    &kp D  &kp S  &kp A  &kp LCTRL
-&kp ESC  &kp FSLH    &kp DOT &kp COMMA &kp M &kp N          &kp B    &kp V  &kp C  &kp X  &kp Z    &kp LSHFT
+&mo 3  &kp P  &kp O  &kp I  &kp U  &kp Y          &kp T  &kp R  &kp E  &kp W  &kp Q  &kp TAB
+&kp SQT  &kp SEMICOLON  &kp L  &kp K  &kp J  &kp H          &kp G  &kp F  &kp D  &kp S  &kp A  &kp LCTRL
+&kp ESC  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp N          &kp B  &kp V  &kp C  &kp X  &kp Z  &kp LSHFT
                          &kp RIGHT_ALT  &mo 2  &kp BACKSPACE    &kp SPACE  &mo 1  &kp LGUI
             >;
         };
