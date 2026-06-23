@@ -31,17 +31,19 @@
 
         // Layer 0: Default QWERTY
         default_layer {
-            // Physical right half types correctly
+            // Physical right half outputs QWERTY correctly
+            // Physical keys: P  O  I  U  Y  T  R  E  W  Q
+            // Output:         Q  W  E  R  T  Y  U  I  O  P
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ESC  |
+            // |  TAB |  P  |  O  |  I  |  U  |  Y  |   |  T  |  R  |  E  |  W  |  Q  | BSPC |
+            // | CTRL |  ;  |  L  |  K  |  J  |  H  |   |  G  |  F  |  D  |  S  |  A  |  '   |
+            // | SHFT |  /  |  .  |  ,  |  M  |  N  |   |  B  |  V  |  C  |  X  |  Z  | ESC  |
             //                    | GUI | SPC | LWR |   | RSE | BSPC | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y          &kp U  &kp I          &kp O    &kp P          &mo 3
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H          &kp J  &kp K          &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N          &kp M  &kp COMMA      &kp DOT  &kp FSLH       &kp ESC
+&kp TAB    &kp P  &kp O  &kp I  &kp U  &kp Y        &kp T  &kp R  &kp E  &kp W  &kp Q  &mo 3
+&kp LCTRL  &kp SEMICOLON  &kp L  &kp K  &kp J  &kp H        &kp G  &kp F  &kp D  &kp S  &kp A  &kp SQT
+&kp LSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp N        &kp B  &kp V  &kp C  &kp X  &kp Z  &kp ESC
                          &kp LGUI  &kp SPACE  &mo 1    &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
             >;
         };
@@ -49,39 +51,39 @@
         // Layer 1: Lower (Numbers and arrows)
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // |  TAB |  0  |  9  |  8  |  7  |  6  |   |  5  |  4  |  3  |  2  |  1  | BSPC |
+            // | BTCLR| BT5 | BT4 | BT3 | BT2 | BT1 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI | SPC |     |   |     | BSPC | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &kp N0  &kp N9  &kp N8  &kp N7  &kp N6        &kp N5  &kp N4  &kp N3  &kp N2  &kp N1  &trans
+&bt BT_CLR  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
 
         // Layer 2: Raise (Symbols)
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // |  TAB |  )  |  (  |  *  |  &  |  ^  |   |  %  |  $  |  #  |  @  |  !  | BSPC |
+            // | CTRL |  \  |  ]  |  [  |  =  |  -  |   |     |     |     |     |     |  `   |
+            // | SHFT | "|" |  }  |  {  |  +  |  _  |   |     |     |     |     |     |  ~   |
             //                    | GUI | SPC |     |   |     | BSPC | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans  &trans  &trans  &trans  &trans          &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                          &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &kp RPAR  &kp LPAR  &kp ASTRK  &kp AMPS  &kp CARET      &kp PRCNT  &kp DLLR  &kp HASH  &kp AT  &kp EXCL  &trans
+&trans  &kp BSLH  &kp RBKT  &kp LBKT  &kp EQUAL  &kp MINUS      &trans  &trans  &trans  &trans  &trans  &kp GRAVE
+&trans  &kp PIPE  &kp RBRC  &kp LBRC  &kp PLUS  &kp UNDER      &trans  &trans  &trans  &trans  &trans  &kp TILDE
+                          &trans  &trans  &trans        &trans  &trans  &trans
             >;
         };
 
         // Layer 3: Function row
         frow {
             bindings = <
-&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&kp F11  &kp F10  &kp F9  &kp F8  &kp F7  &kp F6    &kp F5  &kp F4  &kp F3  &kp F2  &kp F1  &kp F12
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans  &trans  &trans    &trans  &trans  &trans
@@ -90,16 +92,19 @@
 
         // Layer 4: Colemak DH Layout
         colemak_dh_layer {
+            // Colemak DH layout - correctly mapped for right half
+            // Physical keys: P  O  I  U  Y  T  R  E  W  Q
+            // Output:         Q  W  F  P  G  J  L  U  Y  ;
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L  |  U  |  Y  |  ;  | BSPC |
-            // | CTRL |  A  |  R  |  S  |  T  |  D  |   |  H  |  N  |  E  |  I  |  O  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M  |  ,  |  .  |  /  | ESC  |
+            // |  TAB |  ;  |  Y  |  U  |  L  |  J  |   |  G  |  P  |  F  |  W  |  Q  | BSPC |
+            // | CTRL |  O  |  I  |  E  |  N  |  H  |   |  D  |  T  |  S  |  R  |  A  |  '   |
+            // | SHFT |  /  |  .  |  ,  |  M  |  K  |   |  B  |  V  |  C  |  X  |  Z  | ESC  |
             //                    | GUI | SPC | LWR |   | RSE | BSPC | ALT |
 
             bindings = <
-&mo 3  &kp Q  &kp W  &kp F  &kp P  &kp G          &kp J  &kp L  &kp U  &kp Y  &kp SEMICOLON  &kp TAB
-&kp LCTRL  &kp A  &kp R  &kp S  &kp T  &kp D          &kp H  &kp N  &kp E  &kp I  &kp O  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B          &kp K  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&mo 3  &kp SEMICOLON  &kp Y  &kp U  &kp L  &kp J        &kp G  &kp P  &kp F  &kp W  &kp Q  &kp TAB
+&kp LCTRL  &kp O  &kp I  &kp E  &kp N  &kp H        &kp D  &kp T  &kp S  &kp R  &kp A  &kp SQT
+&kp LSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp K        &kp B  &kp V  &kp C  &kp X  &kp Z  &kp ESC
                          &kp LGUI  &kp SPACE  &mo 1    &mo 2  &kp BACKSPACE  &kp RIGHT_ALT
             >;
         };
