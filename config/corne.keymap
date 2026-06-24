@@ -25,7 +25,7 @@
         // Layer 0: Default QWERTY
         default_layer {
             // Physical right half outputs QWERTY correctly
-            // Letters are REVERSED to match physical layout
+            // LETTERS ARE REVERSED to match physical layout
             // -----------------------------------------------------------------------------------------
             // | BSPC |  P  |  O  |  I  |  U  |  Y  |   |  T  |  R  |  E  |  W  |  Q  |  TAB |
             // |  '   |  ;  |  L  |  K  |  J  |  H  |   |  G  |  F  |  D  |  S  |  A  | CTRL |
